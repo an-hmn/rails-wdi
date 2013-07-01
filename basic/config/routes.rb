@@ -13,4 +13,6 @@ Basic::Application.routes.draw do
   get '/auto/:hp/:torque' => 'auto#engine'
 
   get '/calc/:x/:y/:operator' => 'calc#calculate'
+
+  get '/funny' => 'funny#lol'
 end
