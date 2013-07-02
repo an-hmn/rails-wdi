@@ -1,0 +1,10 @@
+<p>There are <%= pluralize(@person_count1, 'person') %> signed up.</p>
+<p>There are <%= pluralize(@person_count2, 'person') %> waiting.</p>
+
+<p><%= truncate(@story, :length => 20) %></p>
+
+<ul>
+  <% @numbers.each do |num| %>
+    <li style="background-color:<%= cycle('red', 'green', 'orange', 'purple') %>">Number <%= num %></li>
+  <% end %>
+</ul>
