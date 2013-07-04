@@ -1,6 +1,6 @@
-Book.delete_all
-Recipe.delete_all
-Ingredient.delete_all
+Book.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
 
 b1 = Book.create(:title => 'La Cuisine', :cuisine => 'French', :chef => 'Francoise Bernard', :image => 'http://4.bp.blogspot.com/-KgaF17qZ1Gg/TbcnZg9s2BI/AAAAAAAAAuk/Y6DffqIjWJo/s1600/3_la-cuisine-everyday-french-home-cooking-by-francoise-bernard_7-best-books-on-french-cuisine.jpg')
 
