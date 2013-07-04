@@ -8,7 +8,17 @@
 </head>
 <body>
 
+<div id="container">
+  <nav>
+    <ul>
+      <li><%= link_to 'Books', books_path %></li>
+      <li><%= link_to 'Recipes', recipes_path %></li>
+      <li><%= link_to 'Ingredients', ingredients_path %></li>
+    </ul>
+  </nav>
+
 <%= yield %>
+</div>
 
 </body>
 </html>

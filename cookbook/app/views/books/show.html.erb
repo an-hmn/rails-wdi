@@ -1,0 +1,19 @@
+<h2><%= link_to(@book.title, @book) %></h2>
+<p><%= @book.cuisine %></p>
+<p><%= @book.chef %></p>
+<%= image_tag(@book.image) %>
+
+<hr>
+
+<% @book.recipes.each do |recipe| %>
+  <section>
+    <h3><%= recipe.name %></h3>
+    <%= image_tag(recipe.image) %>
+    <hr>
+
+    <% recipe.ingredients.each do |ingredient| %>
+      <h4><%= ingredient.name %></h4>
+      <%= image_tag(ingredient.image) %>
+    <% end %>
+  </section>
+<% end %>
