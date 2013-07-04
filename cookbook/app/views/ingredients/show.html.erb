@@ -1,0 +1,4 @@
+<h3><%= @ingredient.name %></h3>
+<%= image_tag(@ingredient.image) %>
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %>
+<%= link_to 'Delete', @ingredient, :method => :delete %>
