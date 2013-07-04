@@ -17,5 +17,10 @@
   <%= f.label :image %>
   <%= f.text_field :image %>
   <br>
+  <% Ingredient.order(:name).each do |ingredient| %>
+    <span><%= ingredient.name %></span>
+    <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients) %>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
