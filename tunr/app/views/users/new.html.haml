@@ -1,5 +1,10 @@
 .row
   .small-3.columns
+    - if @user.errors.any?
+      %ol
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
     = form_for @user do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
