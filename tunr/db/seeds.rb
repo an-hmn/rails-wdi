@@ -1,9 +1,9 @@
-Genre.delete_all
-Song.delete_all
-Album.delete_all
-Artist.delete_all
-User.delete_all
-Mixtape.delete_all
+Genre.destroy_all
+Song.destroy_all
+Album.destroy_all
+Artist.destroy_all
+User.destroy_all
+Mixtape.destroy_all
 
 g1 = Genre.create(:name => 'Classical')
 g2 = Genre.create(:name => 'Rock')
