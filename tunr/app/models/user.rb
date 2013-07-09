@@ -15,4 +15,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :image, :password, :password_confirmation
   has_many :mixtapes
   has_and_belongs_to_many :albums
+
+  validates :image, :presence => true
+  validates :name, :uniqueness => true, :length => { :minimum => 2 }
 end
