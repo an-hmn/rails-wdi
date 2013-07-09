@@ -1,0 +1,10 @@
+<ul>
+<% @users.each do |user| %>
+  <li><%= user.name %>: <%= user.phone %></li>
+  <form method='post' action='/users/sendtxt'>
+    <input type='hidden' name='first' value='<%= user.name %>'>
+    <input type='text' name='body' placeholder='Your message here'>
+    <button>send text message</button>
+  </form>
+<% end %>
+</ul>
