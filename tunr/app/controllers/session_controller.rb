@@ -3,6 +3,7 @@ class SessionController < ApplicationController
   end
 
   def create
+    raise params.inspect
   end
 
   def destroy
