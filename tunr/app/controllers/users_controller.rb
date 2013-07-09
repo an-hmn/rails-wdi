@@ -11,4 +11,18 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @user = @auth
+    render :new
+  end
+
+  def update
+    @user = @auth
+    if @user.update_attributes(params[:user])
+      redirect_to(root_path)
+    else
+      render :new
+    end
+  end
 end
