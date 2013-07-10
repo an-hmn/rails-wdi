@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :check_if_admin, :only => [:index, :destroy]
 
   def index
-    @users = User.all
+    @users = User.order(:name)
   end
 
   def new
