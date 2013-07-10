@@ -29,4 +29,12 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    if @auth.is_admin?
+      user = User.find(params[:id])
+      user.destroy
+    end
+    redirect_to(users_path)
+  end
 end
