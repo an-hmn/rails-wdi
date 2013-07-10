@@ -22,8 +22,8 @@ r2 = Artist.create(:name => 'Nirvana')
 r3 = Artist.create(:name => 'Beatles')
 
 u1 = User.create(:name => 'Bob', :image => 'x', :password => 'a', :password_confirmation => 'a')
-u2 = User.create(:name => 'Sam' :image => 'x', :password => 'a', :password_confirmation => 'a')
-u3 = User.create(:name => 'Jill' :image => 'x', :password => 'a', :password_confirmation => 'a')
+u2 = User.create(:name => 'Sam', :image => 'x', :password => 'a', :password_confirmation => 'a')
+u3 = User.create(:name => 'Jill', :image => 'x', :password => 'a', :password_confirmation => 'a')
 u4 = User.create(:name => 'admin', :image => 'x', :password => 'a', :password_confirmation => 'a',
                  :is_admin => true)
 
