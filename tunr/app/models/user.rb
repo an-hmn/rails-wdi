@@ -13,7 +13,7 @@
 
 class User < ActiveRecord::Base
   has_secure_password
-  attr_accessible :name, :image, :password, :password_confirmation, :is_admin
+  attr_accessible :name, :image, :password, :password_confirmation
   has_many :mixtapes
   has_and_belongs_to_many :albums
 

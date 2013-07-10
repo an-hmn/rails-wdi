@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = @auth.is_admin? ? User.all : []
+  end
+
   def new
     @user = User.new
   end
