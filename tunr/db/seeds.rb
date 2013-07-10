@@ -21,9 +21,11 @@ r1 = Artist.create(:name => 'Michael Jackson')
 r2 = Artist.create(:name => 'Nirvana')
 r3 = Artist.create(:name => 'Beatles')
 
-u1 = User.create(:name => 'Bob')
-u2 = User.create(:name => 'Sam')
-u3 = User.create(:name => 'Jill')
+u1 = User.create(:name => 'Bob', :image => 'x', :password => 'a', :password_confirmation => 'a')
+u2 = User.create(:name => 'Sam' :image => 'x', :password => 'a', :password_confirmation => 'a')
+u3 = User.create(:name => 'Jill' :image => 'x', :password => 'a', :password_confirmation => 'a')
+u4 = User.create(:name => 'admin', :image => 'x', :password => 'a', :password_confirmation => 'a',
+                 :is_admin => true)
 
 m1 = Mixtape.create(:name => 'Easy Listening')
 m2 = Mixtape.create(:name => 'Workout Music')
@@ -38,3 +40,4 @@ u1.mixtapes = [m1, m2]
 u3.mixtapes = [m3]
 m3.songs = [s1, s2, s3]
 u1.albums = [a1, a2]
+
