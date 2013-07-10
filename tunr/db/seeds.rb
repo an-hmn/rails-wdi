@@ -21,11 +21,12 @@ r1 = Artist.create(:name => 'Michael Jackson')
 r2 = Artist.create(:name => 'Nirvana')
 r3 = Artist.create(:name => 'Beatles')
 
-u1 = User.create(:name => 'Bob', :image => 'x', :password => 'a', :password_confirmation => 'a')
-u2 = User.create(:name => 'Sam', :image => 'x', :password => 'a', :password_confirmation => 'a')
-u3 = User.create(:name => 'Jill', :image => 'x', :password => 'a', :password_confirmation => 'a')
-u4 = User.create(:name => 'admin', :image => 'x', :password => 'a', :password_confirmation => 'a',
-                 :is_admin => true)
+u1 = User.create(:name => 'Bob', :image => 'http://www.spookmag.com/wp-content/uploads/BUMBLEBEE-MAN.jpg', :password => 'a', :password_confirmation => 'a')
+u2 = User.create(:name => 'Sam', :image => 'http://www.spookmag.com/wp-content/uploads/BUMBLEBEE-MAN.jpg', :password => 'a', :password_confirmation => 'a')
+u3 = User.create(:name => 'Jill', :image => 'http://www.spookmag.com/wp-content/uploads/BUMBLEBEE-MAN.jpg', :password => 'a', :password_confirmation => 'a')
+u4 = User.create(:name => 'admin', :image => 'http://www.spookmag.com/wp-content/uploads/BUMBLEBEE-MAN.jpg', :password => 'a', :password_confirmation => 'a')
+u4.is_admin = true
+u4.save
 
 m1 = Mixtape.create(:name => 'Easy Listening')
 m2 = Mixtape.create(:name => 'Workout Music')
