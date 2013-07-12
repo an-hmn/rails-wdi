@@ -14,4 +14,5 @@ class Album < ActiveRecord::Base
   has_many :songs
   has_many :artists, :through => :songs
   has_and_belongs_to_many :users
+  validates :name, :presence => true, :length => { :minimum => 1 }
 end

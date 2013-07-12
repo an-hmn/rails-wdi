@@ -1,16 +1,10 @@
 .row
   .small-5.columns
     = render(:partial => '/shared/errors')
-    = form_for @user do |f|
+    = form_for @album do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
       = f.label :image
       = f.text_field :image
-      = f.label :balance
-      = f.text_field :balance
-      = f.label :password
-      = f.password_field :password
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation
       = f.submit nil, :class => 'button radius'
   .small-7.columns

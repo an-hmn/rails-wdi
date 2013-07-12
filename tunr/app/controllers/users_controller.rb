@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to(root_path)
     else
+      @obj = @user
       render :new
     end
   end
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(params[:user])
       redirect_to(root_path)
     else
+      @obj = @user
       render :new
     end
   end

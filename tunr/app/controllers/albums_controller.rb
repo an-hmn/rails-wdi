@@ -14,6 +14,7 @@ class AlbumsController < ApplicationController
     if @album.save
       redirect_to(albums_path)
     else
+      @obj = @album
       render :new
     end
   end
@@ -28,6 +29,7 @@ class AlbumsController < ApplicationController
     if @album.update_attributes(params[:album])
       redirect_to(albums_path)
     else
+      @obj = @album
       render :new
     end
   end
@@ -36,4 +38,5 @@ class AlbumsController < ApplicationController
   def check_if_admin
     redirect_to(root_path) if @auth.nil? || !@auth.is_admin?
   end
+
 end

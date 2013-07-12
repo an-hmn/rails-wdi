@@ -1,0 +1,11 @@
+%table#albums
+  - @albums.each do |album|
+    %tr
+      %td
+        %span= album.name
+      %td
+        %span= album.artists.first.try(:name) || 'The Beatles'
+      %td
+        %span= image_tag(album.image)
+      %td
+        = link_to('Edit', edit_album_path(album), :class => 'button radius tiny') if is_admin?
