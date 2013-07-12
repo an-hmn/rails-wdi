@@ -7,6 +7,8 @@ Tunr::Application.routes.draw do
     end
   end
 
+  resources :albums
+
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
