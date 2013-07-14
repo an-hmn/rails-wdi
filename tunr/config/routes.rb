@@ -7,7 +7,7 @@ Tunr::Application.routes.draw do
     end
   end
 
-  resources :albums
+  resources :albums, :artists, :songs
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

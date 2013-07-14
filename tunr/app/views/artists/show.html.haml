@@ -1,0 +1,4 @@
+%h1= @artist.name
+%ul
+- @artist.songs.each do |song|
+    %li= link_to song.name, song.album

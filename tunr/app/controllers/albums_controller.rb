@@ -5,6 +5,10 @@ class AlbumsController < ApplicationController
     @albums = Album.order(:name)
   end
 
+  def show
+    @album = Album.find(params[:id])
+  end
+
   def new
     @album = Album.new
   end
@@ -38,5 +42,4 @@ class AlbumsController < ApplicationController
   def check_if_admin
     redirect_to(root_path) if @auth.nil? || !@auth.is_admin?
   end
-
 end
