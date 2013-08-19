@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company: MyString
+  position: MyString
+  description: MyText
+  skills: 
+  perks: 
+
+two:
+  company: MyString
+  position: MyString
+  description: MyText
+  skills: 
+  perks: 
