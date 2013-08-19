@@ -3,7 +3,7 @@ namespace :twitter do
 
 
   # Using FactoryGirl, we want to generate a number of test users and tweets
-  # This rake task accepts a parameter (user_count) to 
+  # This rake task accepts a parameter (user_count) to
   desc "Create dummy Twitter posts and users"
   task :posts, [:user_count] => :environment do |t, args|
     # Using our defined factories in /test/factories.rb, generate tweets for a number of users (argument)
@@ -43,4 +43,19 @@ namespace :twitter do
 
   end
 
+  desc "Search Twitter for a user and number of results"
+  task :from, [:author, :limit] => :environment do |t, args|
+    limit = args[:limit].to_i
+
+    t = Twitter.search("from:#{args[:author]}", :count => limit, :result_type => "recent")
+    puts "#{t.statuses.count} results"
+    if t.statuses.count > 0
+      t.statuses.each do |tweet|
+        puts "#{tweet.created_at} #{tweet.text}"
+        Tweet.create(:post => tweet.text)
+      end
+    else
+      puts "No search results from #{args[:author]}"
+    end
+  end
 end
