@@ -20,13 +20,13 @@ FactoryGirl.define do
         education: "Bachelor's degree"
       }
     end
-    sequence(:perks) do |n|
-      [
-        "Job perk #{n}",
-        "Job perk #{n + 1}",
-        "Job perk #{n + 2}"
-      ]
-    end
+    # sequence(:perks) do |n|
+    #   [
+    #     "Job perk {n}",
+    #     "Job perk {n + 1}",
+    #     "Job perk {n + 2}"
+    #   ]
+    # end
     sequence(:date_posted) { |n| n.days.ago }
   end
 

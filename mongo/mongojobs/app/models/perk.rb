@@ -3,5 +3,5 @@ class Perk
 
   field :name, type: String
 
-  belongs_to :job
+  embedded_in :jobs
 end
