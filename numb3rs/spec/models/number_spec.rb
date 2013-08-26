@@ -12,4 +12,10 @@ describe Number do
       expect(Number.dec2bin(13)).to eq '1101'
     end
   end
+
+  describe '.bin2hex' do
+    it 'converts binary to hexadecimal' do
+      expect(Number.bin2hex('1110111110011')).to eq '1df3'
+    end
+  end
 end
