@@ -1,0 +1,11 @@
+body {
+  background-color: pink;
+}
+
+textarea {
+  width: 90%;
+  margin: auto;
+  display: block;
+  min-height: 30em;
+}
+
