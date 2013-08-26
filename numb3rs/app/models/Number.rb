@@ -15,11 +15,9 @@ class Number
   end
 
   def self.dec2bin(decimal)
-
-    # Naive solution: only works for decimal < 2 ** 64
-    power = 64
     values = []
     n = decimal.to_i
+    power = Math.log(n, 2).floor # Use log to work out the "scale" of the number
 
     power.downto(0) do |i|
       quotient = n / 2 ** i
@@ -27,7 +25,7 @@ class Number
         values.push('1')
         n = n - (2 ** i)
       else
-        values.push('0') if values.length > 0
+        values.push('0') # if values.length > 0 # Ignore leading zeros.
       end
     end
 
