@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Number do
   describe '.bin2dec' do
     it 'converts binary to decimal' do
