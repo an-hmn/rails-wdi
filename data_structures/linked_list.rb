@@ -30,6 +30,28 @@ class List
     self
   end
 
-  def pop(value)
+  def pop
+    return nil unless @first
+
+    if @first.next == nil
+      value = @first.value
+      @first = nil
+      return value
+    end
+
+    current_node = @first
+    done = false
+    while !done
+      if current_node.next.next == nil
+        done = true
+      else
+        current_node = current_node.next
+      end
+    end
+
+    value = current_node.next.value
+    current_node.next = nil
+
+    value
   end
 end
